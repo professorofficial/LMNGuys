@@ -1,0 +1,145 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and Background */
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background: #f4f4f9;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background: #023f0e;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.2em;
+}
+
+/* Container */
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Main Section */
+main {
+    padding: 20px 0;
+}
+
+/* Intro Section */
+.intro {
+    background: #e0e0e0;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+/* Features Section */
+.features {
+    margin-bottom: 20px;
+}
+
+.features h2 {
+    margin-bottom: 20px;
+}
+
+.feature-item {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    margin-bottom: 10px;
+}
+
+.feature-item h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.feature-item h3:hover {
+    color: #034920;
+}
+
+.feature-item p {
+    display: none;
+    font-size: 1em;
+}
+
+/* How It Works Section */
+.how-it-works {
+    margin-bottom: 20px;
+}
+
+.how-it-works ol {
+    list-style: none;
+    counter-reset: list-counter;
+}
+
+.how-it-works li {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 10px;
+}
+
+.how-it-works li::before {
+    content: counter(list-counter);
+    counter-increment: list-counter;
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-weight: bold;
+    color: #0044cc;
+}
+
+/* CTA Section */
+.cta {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.cta h2 {
+    margin-bottom: 10px;
+}
+
+.cta p {
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #09651a;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 1.2em;
+}
+
+.cta-button:hover {
+    background: #0d6925;
+}
+
+/* Footer */
+footer {
+    background: #058821;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}

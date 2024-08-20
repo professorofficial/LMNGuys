@@ -1,20 +1,9 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const sections = document.querySelectorAll('.section');
-    const header = document.querySelector('header');
-    const footer = document.querySelector('footer');
-
-    window.addEventListener('scroll', () => {
-        sections.forEach((section) => {
-            const rect = section.getBoundingClientRect();
-            if (rect.top <= window.innerHeight && rect.bottom >= 0) {
-                section.querySelector('video').play();
-                const bgColor = section.getAttribute('data-bgcolor');
-                document.body.style.backgroundColor = bgColor;
-                header.style.backgroundColor = bgColor;
-                footer.style.backgroundColor = bgColor;
-            } else {
-                section.querySelector('video').pause();
-            }
-        });
+// Toggle visibility of answers
+document.querySelectorAll('.feature-item h3').forEach((question) => {
+    question.addEventListener('click', () => {
+        const answer = question.nextElementSibling;
+        const isVisible = answer.style.display === 'block';
+        document.querySelectorAll('.feature-item p').forEach(p => p.style.display = 'none');
+        answer.style.display = isVisible ? 'none' : 'block';
     });
 });
